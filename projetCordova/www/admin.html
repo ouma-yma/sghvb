@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>adminPanel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>panel demo</title>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<!-------------------------------------ADMIN SIGN IN------------------------------->
+
+
+<!---------------------------------------MENU----------------------------------------->
+
+<div data-role="page" id="index">  
+
+    <div data-role="header" data-theme="a">
+        <a href="#nav-panel" data-icon="bars" class="ui-btn-left">Menu</a>
+        <span class="ui-title" />
+       <h1>Espace Admin</h1>
+    </div>
+    <div data-role="content">
+        <p>
+            <h1>Rôle de l'administrateur de site</h1>
+            Le terme « administrateur de site » désigne communément celui qui est chargé d'un site. Il gère tout, ou une partie, des domaines de la conception du site et sa mise en place technique (parfois la mission éditoriale) est comprise dans ses fonctions. Il gère au jour le jour la technique et met à jour le contenu. Il prend en charge l'analyse de la fréquentation avec des outils de mesure d'audience. Il développe l'audience du site en l'optimisant pour favoriser un meilleur référencement des moteurs de recherche (Optimisation pour les moteurs de recherche).<br>
+
+            Selon la taille et l'organisation du site, l'ensemble des fonctions peut être exercé soit par un administrateur de site, soit par une équipe de plusieurs personnes avec des fonctions plus spécialisées. Dans ce cas, les différents métiers peuvent être :<br>
+
+            Intégrateur ;
+            Webdesigner ;
+            Cybermercaticien ;
+            Développeur, ;
+            Rédacteur web ou responsable éditorial des contenus ;
+            Gestionnaire de communauté ;
+            Assistance technique ;
+            Administrateur réseaux ;
+            Administrateur systèmes ;
+            Chef de projet Internet/Intranet ;
+            Médiamaticien (en Suisse) ;
+            Référenceur.
+            En outre, c'est une personne chargée de la maintenance (mise à jour de contenu) et de l'évolution d'un site (veille technique). Un administrateur de site est généralement polyvalent. Il peut se charger aussi bien de la partie programmation, de la création graphique ou même du contenu éditorial du site. L'administrateur de site se doit aussi de faire connaître et de générer du trafic sur le site dont il a la charge. Il doit aussi se soucier de l'ergonomie du site et du respect des normes techniques suggérées par le W3C.<br>
+
+            En fait, l'étendue de la mission d'administrateur de site est fonction de l'entreprise, ou de l'organisation dans laquelle ce métier est exercé. La taille de l'entreprise ou du service modifie totalement le rôle défini du webmestre. Dans des entreprises de moins de 20 personnes, le webmestre y est en quelque sorte l'homme-orchestre du site, il y fait pratiquement tout, à la fois du webdesign, du graphisme, du développement de bases de données, du marketing, de la création de liens et de plus en plus du référencement pour que le site dont il s'occupe soit bien référencé dans les moteurs de recherche. Selon les études de l'Observatoire International des Métiers de l'Internet3, la capacité de référenceur est une compétence de plus en plus demandée. La maîtrise de l'orthographe et de la grammaire est également capitale.
+        </p>
+    </div>
+        <div role="main" class="ui-content jqm-content jqm-fullwidth">
+        <div data-demo-html="#panel-fixed-page1"></div>
+
+    <!-- menu panel content-->
+  <div data-role="panel" data-position-fixed="true" data-display="overlay" data-theme="a" id="nav-panel">
+        <ul data-role="listview" data-inset="true">
+            <li data-icon="user" data-theme="b"><a href="#index">Admin</a></li>
+            <li data-icon="grid"><a href="#listeEtudiants">Liste Etudiants</a></li>
+            <li data-icon="plus"><a href="#ajouterSeance">Ajouter séance</a ></li>
+            <li data-icon="calendar"><a href="#consultRecla">Consulter les réclamations</a></li>
+            <br>
+            <li data-icon="arrow-l"><a href="#index">Déconnexion</a></li>
+        </ul>
+    </div>
+</div>
+<!-------------------------------------- liste Etudiant ------------------------------------------------>
+
+<div data-role="page" id="listeEtudiants">
+    <div data-role="header" data-theme="a">
+        <a href="#nav-panel" data-icon="bars" class="ui-btn-left">Menu</a>
+        <span class="ui-title" />
+        <h1>Liste Etudiants</h1>
+    </div>
+
+        <!-- menu panel content-->
+    <div data-role="panel" id="nav-panel" data-display="overlay" data-postion="left">
+        <ul data-role="listview" data-inset="true">
+            <li data-icon="user" data-theme="b"><a href="#index">Admin</a></li>
+            <li data-icon="grid"><a href="#listeEtudiants">Liste Etudiants</a></li>
+            <li data-icon="plus"><a href="#ajouterSeance">Ajouter séance</a></li>
+            <li data-icon="calendar"><a href="#consultRecla">Consulter les réclamations</a></li>
+            <br>
+            <li data-icon="arrow-l"><a href="#index">Déconnexion</a></li>
+        </ul>
+    </div>
+
+    <table data-role="table" id="temp-table" data-mode="reflow" class="ui-responsive table-stroke">
+        <thead>
+            <tr>
+                <th data-priority="persist">CIN</th>
+                <th data-priority="1">Nom de l'étudiant</th>
+                <th data-priority="1">Opération</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="edit" data-theme="c">Editer</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+            <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="edit" data-theme="c">Editer</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+            <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="edit" data-theme="c">Editer</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+            <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="edit" data-theme="c">Editer</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+            <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="edit" data-theme="c">Editer</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+        </tbody>
+    </table>
+
+    <div align="right">
+        <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="check" data-theme="b">Enregistrer</a>
+    </div>
+</div>
+
+
+<!------------------------------------------------ Ajouter seance -------------------------------------------->
+<div data-role="page" id="ajouterSeance">
+
+    <div data-role="header" data-theme="a">
+        <a href="#nav-panel" data-icon="bars" class="ui-btn-left">Menu</a>
+        <span class="ui-title" />
+        <h1>Ajouter Séance</h1>
+    </div>
+
+        <!-- menu panel content-->
+    <div data-role="panel" id="nav-panel" data-display="overlay" data-postion="left">   
+        <ul data-role="listview" data-inset="true">
+            <li data-icon="user" data-theme="b"><a href="#index">Admin</a></li>
+            <li data-icon="grid"><a href="#listeEtudiants">Liste Etudiants</a></li>
+            <li data-icon="plus"><a href="#ajouterSeance">Ajouter séance</a></li>
+            <li data-icon="calendar"><a href="#consultRecla">Consulter les réclamations</a></li>
+            <br>
+            <li data-icon="arrow-l"><a href="#index">Déconnexion</a></li>
+        </ul>
+    </div>
+
+    <div data-role="content" data-theme="a">
+        <form>
+             <label for="text" style="font-weight: bold;">Nom de la séance:</label>
+             <input type="text" name="text" id="text" value="">
+
+             <label for="date" style="font-weight: bold;">Date de la séance:</label>
+             <input type="date" data-clear-btn="false" name="date" id="date" value="">
+
+            <label for="time" style="font-weight: bold;">Temps de la séance:</label>
+            <input type="time" data-clear-btn="false" name="time" id="time" value="">
+        </form>
+    </div>
+
+
+        <div align ="right">
+            <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="check" data-theme="b">Ajouter</a>
+        </div>
+</div>
+
+
+
+
+<!-------------------------------------- Consulter les réclamations------------------------->
+<div data-role="page" id="consultRecla">
+    <div data-role="header" data-theme="a">
+        <a href="#nav-panel" data-icon="bars" class="ui-btn-left">Menu</a>
+        <span class="ui-title">
+        <h1>Consulter les réclamations</h1>
+    </div>
+
+        <!-- menu panel content-->
+    <div data-role="panel" id="nav-panel" data-display="overlay" data-postion="left">
+        <ul data-role="listview" data-inset="true">
+            <li data-icon="user" data-theme="b"><a href="#index">Admin</a></li>
+            <li data-icon="grid"><a href="#listeEtudiants">Liste Etudiants</a></li>
+            <li data-icon="plus"><a href="#ajouterSeance">Ajouter séance</a></li>
+            <li data-icon="calendar"><a href="#">Consulter les réclamations</a></li>
+            <br>
+            <li data-icon="arrow-l"><a href="#index">Déconnexion</a></li>
+        </ul>
+    </div>
+
+    <table data-role="table" id="temp-table" data-mode="reflow" class="ui-responsive table-stroke">
+        <thead>
+            <tr>
+                <th data-priority="persist">CIN</th>
+                <th data-priority="1">Nom de l'étudiant</th>
+                <th>Nombre de réclamation</th>
+                <th data-priority="1">Opération</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>3</td>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="eye" data-theme="c">Voir</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="comment" data-theme="c">Répondre</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+                <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>3</td>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="eye" data-theme="c">Voir</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="comment" data-theme="c">Répondre</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+                <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>3</td>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="eye" data-theme="c">Voir</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="comment" data-theme="c">Répondre</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+                <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>3</td>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="eye" data-theme="c">Voir</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="comment" data-theme="c">Répondre</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+                <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>3</td>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="eye" data-theme="c">Voir</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="comment" data-theme="c">Répondre</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+
+                <tr>
+                <td>12345678</td>
+                <th>Floulen ben fouleen</th>
+                <td>3</td>
+                <td>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="eye" data-theme="c">Voir</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="comment" data-theme="c">Répondre</a>
+                    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-theme="c">Supprimer</a>
+                </td>   
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</body>
+</html>

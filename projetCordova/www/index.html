@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>login Page</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <script type="text/javascript" src="java.js"></script>
+</head>
+<body>
+    <div data-role="page" id="login">
+        <div data-role="header" data-position="fixed" data-theme="c">
+        <h1>Login</h1>
+        <a href="register.html" data-ajax="false" data-icon="grid" class="ui-btn-right">Register</a>
+    </div>
+        <div data-role="fieldcontain">
+           <label for="username">Username</label>
+           <input type="text" id="username" placeholder="enter username">
+        </div>
+        <div data-role="fieldcontain">
+           <label for="password">Password</label>
+           <input type="password" id="password" placeholder="enter password">
+        </div>
+        <div data-role="fieldcontain">
+           <label for="login"></label>
+           <a href="javascript:check()" data-role="button">Login</a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Register Page</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <script type="text/javascript" src="java.js"></script>
+</head>
+<body>
+    <div data-role="page" id="register">
+        <div data-role="header" data-position="fixed" data-theme="c">
+            <h1>Register</h1>
+            <a href="#" data-icon="back" data-rel="back" class="ui-btn-left">Cancel</a>
+        </div>
+        <form action="process.cfm" method="post" id="registerForm">
+            <fieldset data-role="fieldcontain"> 
+                <label for="regusername">Username:</label>
+                <input type="text" name="username" id="regusername" class="required" minlength="5">
+                <br>
+                <span id = "blankMsg"></span> 
+            </fieldset>
+            <fieldset data-role="fieldcontain"> 
+                <label for="regpassword">Password:</label>
+                <input type="password" name="password" id="regpassword" class="required" minlength="5">
+                <br>
+                <span id="message1"></span>
+            </fieldset>
+            <fieldset data-role="fieldcontain"> 
+                <label for="confpassword"> Confirm password:</label>
+                <input type="password" name="password" id="confpassword" class="required" minlength="5">
+                <br>
+                <span id="message2"></span>
+            </fieldset>
+            <div data-role="fieldcontain">
+                <label></label>
+                <a href="javascript:store()" data-role="button">Register</a>
+                <br>
+                <span id="message3"></span>
+            </div>     
+        </form>
+
+	</div>
+</body>
+</html>
